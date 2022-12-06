@@ -3,7 +3,7 @@ package com.telran.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.w3c.dom.html.HTMLInputElement;
+
 
 public class HomePage extends BasePage{
     public HomePage(WebDriver driver){
@@ -24,4 +24,5 @@ public class HomePage extends BasePage{
         accountLink.click();
         return new ProfilePage(driver);
     }
+
 }

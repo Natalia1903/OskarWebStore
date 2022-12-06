@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.Collection;
+
 
 public class RegisterPage extends BasePage{
     public RegisterPage(WebDriver driver) {
@@ -29,6 +31,12 @@ public class RegisterPage extends BasePage{
         return this;
 
     }
+    @FindBy(css = ".alertinner.wicon")
+    WebElement registeringText;
 
+    public String verifyRegisterText() {
+        return registeringText.getText();
+
+    }
 }
 
