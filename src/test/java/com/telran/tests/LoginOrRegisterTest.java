@@ -26,13 +26,10 @@ public class LoginOrRegisterTest extends BaseTest{
     }
 
     @Test
-    public void  LoginPositiveTest (){
-        new LoginPage(driver).fillLoginForm(UserData.USER_EMAIL,UserData.USER_PASSWORD);
+    public void  LoginPositiveTest () {
+        new LoginPage(driver).fillLoginForm(UserData.USER_EMAIL, UserData.USER_PASSWORD);
         new HomePage(driver).clickOnAccountlink();
         Assert.assertTrue(new ProfilePage(driver).verifyLoginText().contains(AssertData.CONFIRMATION_LOGIN));
 
     }
-
-
-
 }
